@@ -2,7 +2,7 @@
 
 header("Access-Control-Allow-Origin: *");
 error_reporting(E_ERROR | E_PARSE);
-$db = new SQLite3('/tmp/scores.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+$db = new SQLite3('scores.sqlite', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
 if ($_GET['x'] == "install")
 {
@@ -82,9 +82,18 @@ else
 		<title></title>
 
 		<!-- Bootstrap core CSS -->
-		<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 		<!-- Custom styles for this template -->
-		<link href="dist/css/position.css" rel="stylesheet">
+		<style>
+			body {
+			  padding-top: 5rem;
+			}
+			.starter-template {
+			  padding: 3rem 1.5rem;
+			  text-align: center;
+			}
+		</style>
+
 	  </head>
 
 	  <body>
@@ -125,9 +134,9 @@ else
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-		<script src="assets/js/vendor/popper.min.js"></script>
-		<script src="dist/js/bootstrap.min.js"></script>
+		<script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"><\/script>')</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 	  </body>
 	</html>
 	<?php
